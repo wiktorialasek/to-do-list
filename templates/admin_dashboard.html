@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">User Dashboard</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>This is the admin dashboard. Here you can manage the application settings, users, and view detailed reports.</p>
+        </section>
+        <section>
+            <h2>Admin Actions</h2>
+            <ul>
+                <li><a href="#">Manage Users</a></li>
+                <li><a href="#">View Reports</a></li>
+                <li><a href="#">Application Settings</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Recent Activity</h2>
+            <p>No recent activity.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Application Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
